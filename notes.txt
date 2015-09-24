@@ -1,0 +1,27 @@
+ideas:
+	- open with what is revision control, general overview
+
+Source #1: a tutorial from:  http://hginit.com/
+
+- Mercurial is a version control system.
+- every developer has a copy of the entire repository
+- in practice, a central repository is also used
+
+Awesome quote:
+'''
+Since all new code that you write has bugs, you have a choice.
+
+You can check in buggy code and drive everyone else crazy, or
+You can avoid checking it in until it’s fully debugged.
+Subversion always gives you this horrible dilemma. Either the repository is full of bugs because it includes new code that was just written, or new code that was just written is not in the repository.
+'''
+- you can commit without every team member getting the change in their repository. hg com commits to your local repository and hg push commits to the central repository. You can share changes with specific teammates.
+
+'''
+When we have to merge, Subversion tries to look at both revisions—my modified code, and your modified code—and it tries to guess how to smash them together in one big unholy mess. It usually fails, producing pages and pages of “merge conflicts” that aren’t really conflicts, simply places where Subversion failed to figure out what we did.
+'''
+- svn is revision controls for files. In Mercurial, it's revision control for directories.  In a subdirectory in svn, if I commit, I commit only files that have changed in that directory or some sub directory there of. In mercurial, it doesn't matter where you are, every directory will be affected.
+
+'''
+While your competitors are busy taking a week to resolve all the merge conflicts they got when a vendor updated a library, you’re going to type hg merge and say to yourself, “Oh gosh, that’s cool, it just worked.”
+'''
