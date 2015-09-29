@@ -16,6 +16,35 @@ Chapter 0: Hg vs SVN
 - Author has examples about how teams in companies work around SVN limitations (large #ifdef blocks, no branching, etc). I don't see those extreme examples where I work. However, someone's full time job is decided where, when, and how to branch. Branches are releases and you need a review board to check in changes once a release is "hardened." Furthermore, development is done in private branches only, only stable code may be checked in to trunk. Not all developers develop in a private branch due to inevitable merging conflicts, so if a dev environment goes down, developers have the potential to lose all their work.
 
 
+Chapter 1: Hg options
+- type "hg" for a list of common commands
+	-- gives add, clone, merge, diff, push, pull, etc.
+- the repository saves a set of changes, not a set of files
+- mercurial is distributed (no central server required)
+- "hg init" to create a repository, a .hg directory will be created
+- I tried "hg add" on my git repo. "hg add" will add everything in a directory, including hidden files. That's not really what I wanted.
+- doing an "hg revert --all" corrects this
+	-- "hg revert" reverts everything in current directory to what it was at the last commit. Cool!
+- "hg log" to see history of changes
+- "hg commit" to commit changes. No need to "add" anything -- mercurial will figure out which files have changes and commit them. A summary file is opened before commits are made so that you can see what files are being committed.
+- "hg status" will tell you what files have changed. Equivalent to "svn status -u"?
+- and, like SVN, there are character codes that tell you something about files in the repo:
+	! missing
+	? unknown
+	M modified
+	R removed
+	A added
+- what changed? Find out with "hg diff"
+	- hg diff looks pretty much the same as svn/git diff
+- to view previous versions of a file:
+	$ hg cat -r <rev number> <file>
+	ex:
+	$ hg cat -r 0 a.txt
+- you can also use this to see changes across revisions:
+	$ hg cat -r 0:1 a.txt
+- "hg update" will go to any specified revision. Without additional arguments, goes to newest revision
+
+
 Awesome quotes (chapter 0):
 '''
 Since all new code that you write has bugs, you have a choice.
