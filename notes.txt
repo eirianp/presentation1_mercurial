@@ -3,11 +3,20 @@ ideas:
 
 Source #1: a tutorial from:  http://hginit.com/
 
+Chapter 0: Hg vs SVN
 - Mercurial is a version control system.
 - every developer has a copy of the entire repository
 - in practice, a central repository is also used
+- SVN land: you think about revisions
+  Hg land: you think about changesets (a list of changes between revisions)
+- merging is better than SVN in Hg
+- branching/merging means that you can share your code with other developers and testers
+	-- SVN makes branching and merging difficult, which is counter productive
+- SVN operates on files. Hg operates on directories
+- Author has examples about how teams in companies work around SVN limitations (large #ifdef blocks, no branching, etc). I don't see those extreme examples where I work. However, someone's full time job is decided where, when, and how to branch. Branches are releases and you need a review board to check in changes once a release is "hardened." Furthermore, development is done in private branches only, only stable code may be checked in to trunk. Not all developers develop in a private branch due to inevitable merging conflicts, so if a dev environment goes down, developers have the potential to lose all their work.
 
-Awesome quote:
+
+Awesome quotes (chapter 0):
 '''
 Since all new code that you write has bugs, you have a choice.
 
