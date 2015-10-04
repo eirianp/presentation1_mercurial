@@ -51,7 +51,29 @@
 * What is a branch?
 <br><br><br><br><br>
 
+## Traditional version control -- concepts
+* Let's review concepts through *use cases*
+	* checking out
+		* Earl the new hire joins our team. The first thing we'd like him to do is *check out* the latest code from *trunk*, the active development branch
+		* Shannon would like to *check out* Dan's private branch so that she can pair program with him and make changes without affecting *trunk*.
+		* Cory *checks out* a legacy branch for gen 6 in order to investigate and resolve a defect customers are still complaining about.
+	* committing
+		* Once Shannon has added feature or resolved a defect, she needs to *commit* her change so that it is visable to her teammates. This allows the build team to create a *nightly build* with all the new changes from the previous day.
+	* branching
+		* A *branch* is a copy of the code from some *revision*, or a point in time
+		* After so many *iterations* in the software development lifecycle, Larry the product owner will create a gen 9 branch, which will then become maintenance only, and all the developers will happily continue developing on trunk, which will be for gen 10 until the next product branch.
+		* Shannon may create her own branch for development purposes and share it with her teammates. Once she's satisfied with her changes, she can *merge* them with trunk
+	* merging
+		* Merging applies changes from one code source to another.
+		* One branch may be merged to another, for example
+<br><br><br><br><br>
+
+
 ## Traditional version control -- advantages
+* The administrator has control over "who can do what"
+	* The administrator determines where and when to *branch*
+	* The administrator determines who can add changes
+		* Shannon shouldn't be making un-approved and un-tested changes to a maintenance only branch
 <br><br><br><br><br>
 
 ## Traditional version control -- short comings
