@@ -33,4 +33,5 @@ Similarities (probably not all of them):
 "Summary
 In terms of implementation effort, Mercurial has a clear advantage due to its efficient HTTP transport protocol.
 
+
 In terms of features, Git is more powerful, but this tends to be offset by it being more complicated to use."

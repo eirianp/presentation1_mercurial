@@ -206,7 +206,48 @@
 
 <br><br><br><br><br>
 
+## Dive into distributed version control with Mercurial -- The Basics
+* Mercurial has a similar interface to Git.
+* In fact, Git and Mercurial resemble each other because they *borrow features* [from each other.](http://stackoverflow.com/questions/1598759/git-and-mercurial-compare-and-contrast)
+* Let's see some examples:
+	* type `hg init` to create a new repository. A .hg directory will be created in the current working directory.
+	* Next, try to add some files to the repository with `hg add`.
+	* What did you notice?  `hg add` will add everything in the current directory to the repository. Does your directory have hidden files? If you are also in a Git repository, for example, every file will be recursivly added, even if it's in a hidden file or directory (for example .git/).
+	* If that's not what you wanted, simple do an `hg revert` or `hg rever --all` to revert everything in the current directory to what it was at the last commit.
+	* Ok, let's try that again. Do an `hg add foo.txt` to add `foo.txt` to the repository only.
+	* Do an `hg status` to see which files have changed. This is roughly equivalent to `svn status -u`.
+		* Mercurial gives character codes similar to SVN:
+			* ! missing
+			* ? unknown
+			* M modified
+			* R removed
+			* A added
+	* Next, try an `hg commit` to commit changes to your local repository. Unlike Git, there is no need to `hg add foo.txt` again.
+	* A log of revision changes are viewable with `hg log`. Like Git, these are also viewable as a graph with `hg log --graph`. 
+		* You might notice a hash value by the revision number. Both Git and Mercurial use a SHA1 hash to create hash values for some changeset.
+	* Like SVN, you can view diffs against the head revision with `hg diff <filename>`. It is also possible to compare diffs from a file from any revision using `hg diff <filename> -r x:y` where x and y are revisions of interest.
+	* You may also view diffs with `hg cat <filename> -r x:y`. Or, view any revision of a file without moving your repository to a different branch or changeset: `hg cat <filename> -r x`. Again, x is a revision of interest.
+	* `hg update` may be used to go to any specified revision. This is similar to `git checkout`.
+	* `hg update` without any arguments will simply take you to the newest revision.
+<br><br><br><br><br>
 
+## Dive into distributed version control with Mercurial -- The Basics
+* `hg push` is about the same as `git push`. 
+* `hg pull` is about the same as `git pull`. 
+	* it's worth noting that `push` and `pull` operations do not automatically update the working copy to the head revision. 
+	* you must perform an `hg up` to get to `tip` or the top of the change set.
+* `hg incoming` and `hg outgoing` push/pull to the central repository, if one exists.
+* Mercurial can also create a webserver with the `hg serve` command. Take a look:
+![alt text](http://www.torsten-horn.de/img/mercurial-hg-serve.png "hg serve")
+* Mercurial tells you where to navigate to in a web browser:
+	* `listening at http://terminus.local:8000/ (bound to *:8000)`
+	* this is roughly equivalent to `git instaweb`.
+	* Personally, I find `hg serve` much more useful than `hg cat`'ing through different revisions. As a software developer, a web interface is useful to me when I want to see when a bug was introduced or fixed.
+<br><br><br><br><br>
+
+## Mercurial Extension
+* also talk bout how Hg is monolithic and Git is an aggregate of smaller programs.
+<br><br><br><br><br>
 
 ## References
 1. http://hginit.com/
@@ -221,4 +262,4 @@
 10. https://code.google.com/p/support/wiki/DVCSAnalysis
 11. http://stevelosh.com/blog/2010/01/the-real-difference-between-mercurial-and-git/
 12. http://stackoverflow.com/questions/1598759/git-and-mercurial-compare-and-contrast
-
+13. http://biz30.timedoctor.com/git-mecurial-and-cvs-comparison-of-svn-software/
