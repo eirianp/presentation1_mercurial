@@ -125,84 +125,84 @@
 >  <br>
 > list of commands: <br>
 >  <br>
->  add           add the specified files on the next commit
->  addremove     add all new files, delete all missing files
->  annotate      show changeset information by line for each file
->  archive       create an unversioned archive of a repository revision
->  backout       reverse effect of earlier changeset
->  bisect        subdivision search of changesets
->  bookmarks     create a new bookmark or list existing bookmarks
->  branch        set or show the current branch name
->  branches      list repository named branches
->  bundle        create a changegroup file
->  cat           output the current or given revision of files
->  clone         make a copy of an existing repository
->  commit        commit the specified files or all outstanding changes
->  config        show combined config settings from all hgrc files
->  copy          mark files as copied for the next commit
->  diff          diff repository (or selected files)
->  export        dump the header and diffs for one or more changesets
->  files         list tracked files
->  forget        forget the specified files on the next commit
->  graft         copy changes from other branches onto the current branch
->  grep          search for a pattern in specified files and revisions
->  heads         show branch heads
->  help          show help for a given topic or a help overview
->  identify      identify the working directory or specified revision
->  import        import an ordered set of patches
->  incoming      show new changesets found in source
->  init          create a new repository in the given directory
->  log           show revision history of entire repository or files
->  manifest      output the current or given revision of the project manifest
->  merge         merge another revision into working directory
->  outgoing      show changesets not found in the destination
->  paths         show aliases for remote repositories
->  phase         set or show the current phase name
->  pull          pull changes from the specified source
->  push          push changes to the specified destination
->  recover       roll back an interrupted transaction
->  remove        remove the specified files on the next commit
->  rename        rename files; equivalent of copy + remove
->  resolve       redo merges or set/view the merge status of files
->  revert        restore files to their checkout state
->  root          print the root (top) of the current working directory
->  serve         start stand-alone webserver
->  status        show changed files in the working directory
->  summary       summarize working directory state
->  tag           add one or more tags for the current or given revision
->  tags          list repository tags
->  unbundle      apply one or more changegroup files
->  update        update working directory (or switch revisions)
->  verify        verify the integrity of the repository
->  version       output version and copyright information
-> 
-> enabled extensions:
-> 
->  shelve        save and restore changes to the working directory
-> 
-> additional help topics:
-> 
->  config        Configuration Files
->  dates         Date Formats
->  diffs         Diff Formats
->  environment   Environment Variables
->  extensions    Using Additional Features
->  filesets      Specifying File Sets
->  glossary      Glossary
->  hgignore      Syntax for Mercurial Ignore Files
->  hgweb         Configuring hgweb
->  merge-tools   Merge Tools
->  multirevs     Specifying Multiple Revisions
->  patterns      File Name Patterns
->  phases        Working with Phases
->  revisions     Specifying Single Revisions
->  revsets       Specifying Revision Sets
->  scripting     Using Mercurial from scripts and automation
->  subrepos      Subrepositories
->  templating    Template Usage
->  urls          URL Paths
-> 
-> (use "hg help -v" to show built-in aliases and global options)
+>  add           add the specified files on the next commit <br>
+>  addremove     add all new files, delete all missing files <br>
+>  annotate      show changeset information by line for each file <br>
+>  archive       create an unversioned archive of a repository revision <br>
+>  backout       reverse effect of earlier changeset <br>
+>  bisect        subdivision search of changesets <br>
+>  bookmarks     create a new bookmark or list existing bookmarks <br>
+>  branch        set or show the current branch name <br>
+>  branches      list repository named branches <br>
+>  bundle        create a changegroup file <br>
+>  cat           output the current or given revision of files <br>
+>  clone         make a copy of an existing repository <br>
+>  commit        commit the specified files or all outstanding changes <br>
+>  config        show combined config settings from all hgrc files <br>
+>  copy          mark files as copied for the next commit <br>
+>  diff          diff repository (or selected files) <br>
+>  export        dump the header and diffs for one or more changesets <br>
+>  files         list tracked files <br>
+>  forget        forget the specified files on the next commit <br>
+>  graft         copy changes from other branches onto the current branch <br>
+>  grep          search for a pattern in specified files and revisions <br>
+>  heads         show branch heads <br>
+>  help          show help for a given topic or a help overview <br>
+>  identify      identify the working directory or specified revision <br>
+>  import        import an ordered set of patches <br>
+>  incoming      show new changesets found in source <br>
+>  init          create a new repository in the given directory <br>
+>  log           show revision history of entire repository or files <br>
+>  manifest      output the current or given revision of the project manifest <br>
+>  merge         merge another revision into working directory <br>
+>  outgoing      show changesets not found in the destination <br>
+>  paths         show aliases for remote repositories <br>
+>  phase         set or show the current phase name <br>
+>  pull          pull changes from the specified source <br>
+>  push          push changes to the specified destination <br>
+>  recover       roll back an interrupted transaction <br>
+>  remove        remove the specified files on the next commit <br>
+>  rename        rename files; equivalent of copy + remove <br>
+>  resolve       redo merges or set/view the merge status of files <br>
+>  revert        restore files to their checkout state <br>
+>  root          print the root (top) of the current working directory <br>
+>  serve         start stand-alone webserver <br>
+>  status        show changed files in the working directory <br>
+>  summary       summarize working directory state <br>
+>  tag           add one or more tags for the current or given revision <br>
+>  tags          list repository tags <br>
+>  unbundle      apply one or more changegroup files <br>
+>  update        update working directory (or switch revisions) <br>
+>  verify        verify the integrity of the repository <br>
+>  version       output version and copyright information <br>
+>  <br>
+> enabled extensions: <br>
+> <br> 
+>  shelve        save and restore changes to the working directory <br>
+>  <br>
+> additional help topics: <br>
+>  <br>
+>  config        Configuration Files <br>
+>  dates         Date Formats <br>
+>  diffs         Diff Formats <br>
+>  environment   Environment Variables <br>
+>  extensions    Using Additional Features <br>
+>  filesets      Specifying File Sets <br>
+>  glossary      Glossary <br>
+>  hgignore      Syntax for Mercurial Ignore Files <br>
+>  hgweb         Configuring hgweb <br>
+>  merge-tools   Merge Tools <br>
+>  multirevs     Specifying Multiple Revisions <br>
+>  patterns      File Name Patterns <br>
+>  phases        Working with Phases <br>
+>  revisions     Specifying Single Revisions <br>
+>  revsets       Specifying Revision Sets <br>
+>  scripting     Using Mercurial from scripts and automation <br>
+>  subrepos      Subrepositories <br>
+>  templating    Template Usage <br>
+>  urls          URL Paths <br>
+>  <br>
+> (use "hg help -v" to show built-in aliases and global options) <br>
 
 <br><br><br><br><br>
 
