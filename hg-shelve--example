@@ -1,0 +1,9 @@
+foo bar
+hg shelve looks equivalent to git stash. Basically, you can set aside changes that you're not actively working on. For example, at work I make changes that reduce warning messages, but it's not always easy to get code reviews on these changes. I could simply "shelve" these changes until they're up for discussion instead of keeping them un-tracked.
+
+Here are my sources:
+http://margotskapacs.com/2012/10/shelving-uncommitted-changes-in-mercurial/
+http://codeyarns.com/2014/04/11/how-to-use-shelve-extension-of-mercurial/
+http://tortoisehg.bitbucket.org/manual/0.9/shelve.html
+http://stackoverflow.com/questions/11520047/how-do-i-put-a-bunch-of-uncommitted-changes-aside-while-working-on-something-els
+http://ndpsoftware.com/git-cheatsheet.html

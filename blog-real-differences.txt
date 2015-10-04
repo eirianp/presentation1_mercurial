@@ -1,0 +1,21 @@
+from http://stevelosh.com/blog/2010/01/the-real-difference-between-mercurial-and-git/
+
+differences between hg and git
+- look and feel
+	- git overloads commands
+	- mercurial has one command do one thing
+		- this makes me think of C++. Yikes.
+
+
+"Each git command is like a Swiss Army knife. For example, git checkout can switch the working directory to a new branch, update file contents to that of a previous revision, and even create a new branch. It’s an efficient way to work once you learn all the arguments and how they interact with each other.
+
+Mercurial is like a well-equipped kitchen — it has a lot of tools that each do one simple, well-defined thing, and do it well. To switch the working directory you use hg update. To update file contents to what they were at a previous revision you use hg revert. To create a new branch you use hg branch. This means there are more commands to learn, but each command is much simpler and more specific to a single conceptual task.
+
+I personally find Mercurial’s philosophy easier to work with. It’s easy for me to wrap my head around commands when they’re more modular and less monolithic."
+
+
+Popular hosting sites make a difference
+- this site says that github is better than bitbucket. Other sites say they're about the same.
+
+from http://stevelosh.com/blog/2009/08/a-guide-to-branching-in-mercurial/#branching-anonymously
+- branching is pretty different than Git apparently
