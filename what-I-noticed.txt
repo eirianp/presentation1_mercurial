@@ -1,0 +1,39 @@
+what I noticed is that hg is much more verbose
+
+eiriano> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.hg/
+
+nothing added to commit but untracked files present (use "git add" to track)
+eiriano> hg status
+M notes.txt
+? .git/COMMIT_EDITMSG
+? .git/HEAD
+? .git/config
+? .git/description
+? .git/hooks/applypatch-msg.sample
+? .git/hooks/commit-msg.sample
+? .git/hooks/post-update.sample
+? .git/hooks/pre-applypatch.sample
+? .git/hooks/pre-commit.sample
+? .git/hooks/pre-push.sample
+? .git/hooks/pre-rebase.sample
+? .git/hooks/prepare-commit-msg.sample
+? .git/hooks/update.sample
+? .git/index
+? .git/info/exclude
+? .git/logs/HEAD
+? .git/logs/refs/heads/master
+? .git/objects/12/542ce8c53b8a4c306945623fc29833171d0b0f
+? .git/objects/26/dd5629c7cc835381628448d84fa10a8e0a1be8
+? .git/objects/54/d4c08f187f8f37f8d57d864bbd0af02171f104
+? .git/objects/88/66a61bef93a7eb8adbd92025e5638b68122ba9
+? .git/objects/a6/4b720eb40a3379ad7177e828f0d08efb454859
+? .git/objects/af/fc1d3a5e2737981102f68b245a293cd33d84ac
+? .git/objects/c2/7afb97911c3f5b2af005baeed71a5c31d124d1
+? .git/objects/ce/2a43d6d39016593e5dc57e1b0a67946ea10196
+? .git/objects/d6/50f027f97621c02ca1c329648fa9fd0781501f
+? .git/refs/heads/master

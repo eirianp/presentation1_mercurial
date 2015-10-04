@@ -1,5 +1,14 @@
 ideas:
 	- open with what is revision control, general overview
+		- or.... start with what problem are we trying to solve
+			- why revision control
+			- why Hg
+	- go though commands
+	- optional:
+		- hg vs svn
+		- hg vs git
+	- how to set up a central repo (and why you would want to)
+	- hg serve and sharing with your friends
 
 Source #1: a tutorial from:  http://hginit.com/
 
@@ -44,6 +53,71 @@ Chapter 1: Hg options
 	$ hg cat -r 0:1 a.txt
 - "hg update" will go to any specified revision. Without additional arguments, goes to newest revision
 
+chapter 2:
+- mercurial can create a webserver to share the central repository...
+	$ hg serve
+	- this is really cool because you can browse through the repo 
+- hg push -- about the same as git
+- hg incoming/outgoing -- push/pull to central repo
+- hg merge -- even if 2 people modified a file, hg can handle merging if it was on different parts of the file
+- after a "hg pull" you have to do "hg up" to get to the "tip" or the top of the change set.
+	- without the "hg up" you're in the same change set you were before
+
+chapter 3: rolling back
+- hg revert -- revert to last revision 
+- hg rollback -- undo last commit only (NOT push)
+- hg backout -r <foo> --merge
+	- remove changes from revision foo
+	- this may cause merge conflicts
+
+chapter 4: merging
+- after an hg pull, it's possible there are two "heads" (if 2 people made changes on the most recent changeset)
+- in this case, a merge is required
+	- you must commit after performing a merge. You have the chance to view changes before committing.
+	- if there is a merge conflict, you will manually have to resolve it
+	- if changes are in different parts of the file, hg will merge automatically
+
+chapter 5: change sets
+- the hash value uniquely identifies a revision
+- a revision number doesn't. It can differ between people's repos
+- you can give a changeset a unique name, called a "tag"
+	hg tag foobar
+- now when you do an hg log you can see the tag
+- take a look:
+
+eiriano> hg tag my-great-tag
+eiriano> hg commit -m "adding tag"
+eiriano> hg log
+changeset:   3:a6848afc4a3b
+tag:         tip
+user:        eirian
+date:        Sat Oct 03 20:09:50 2015 -0600
+summary:     adding tag
+
+changeset:   2:7b16732fea62
+user:        eirian
+date:        Sat Oct 03 20:09:43 2015 -0600
+summary:     Added tag my-great-tag for changeset 8bc04e68e855
+
+changeset:   1:8bc04e68e855
+tag:         my-great-tag
+user:        eirian
+date:        Tue Sep 29 00:17:04 2015 -0600
+summary:     second commit, typing "hg commit" will commit all changed files. That's pretty convenient!
+
+changeset:   0:8a935b4f88b5
+user:        eirian
+date:        Tue Sep 29 00:14:58 2015 -0600
+summary:     adding notes.txt to first commit
+
+- you can do an hg up -r <tag> to go to a particular changeset:
+	hg up -r my-great-tag
+- suppose my-great-tag was some version that gets shipped to a customer, and a bug has to get changed. You can hg up to it, make a change, and ship. That doesn't seem too much different than going to a branch on svn for the same reason.
+- if you want this new change in head, you have to do an hg merge. Mercurial has a bug where the .hgtags file has a merge conflict (if some revisions have tags). Just make sure to leave every line in the file.
+- alternatively, just clone one branch to another
+	hg clone -r <foo> my-great-tag some-other-tag
+
+
 
 Awesome quotes (chapter 0):
 '''
@@ -62,4 +136,13 @@ When we have to merge, Subversion tries to look at both revisions—my modified 
 
 '''
 While your competitors are busy taking a week to resolve all the merge conflicts they got when a vendor updated a library, you’re going to type hg merge and say to yourself, “Oh gosh, that’s cool, it just worked.”
+'''
+
+using multiple branches (chapter 5):
+'''
+There are other ways you can use multiple repositories.
+
+- You can set up a team repository where a few people work on a feature together. When they are finished and the feature works well, you push the changes from the team repository to the main development repository, and then everyone else sees it.
+- You can set up a QA repository for the testers. Instead of pushing into the main repository, you push into the QA repository where your code is tested. Once the testers approve it, you push from the QA repository into the main development repository. That way the main repository always contains tested code.
+- Since each developer has their own repository, you can pull an experimental changeset from your friend to test it, without inflicting that change on the rest of the team.
 '''
