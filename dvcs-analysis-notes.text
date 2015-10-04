@@ -1,0 +1,36 @@
+from https://code.google.com/p/support/wiki/DVCSAnalysis
+
+- in typical version control systems with a central repo, users have a local copy of the code, but no revision history.
+- in git/hg every user has a local repo, which means they have history, branches, etc. Switching branches and committing are local operations. Push and pull operations transfer information to or from a remote repository.
+- both git and hg use SHA1 hashes to identify files, trees, changesets, etc.
+
+Differences:
+- you cannot prune branches in mercurial. You can in git
+	- this means discarding branches
+- git supports an unlimited number of parents. Hg supports 2
+	- you have to do "N-1 two-way merges" in Hg
+
+Hg advantages
+- easier to learn due to:
+	- fewer commands
+	- better documentation
+- Windows support
+	- official way to run git in windows is with cygwin
+- " Git requires periodic maintenance of repositories (i.e. git-gc), Mercurial does not require such maintenance. Note, however, that Mercurial is also a lot less sophisticated with respect to managing the clients disk space (see Client Storage Management above)."
+
+things they do differently
+- rename/copy tracking
+- architecture
+	- "Git was originally a large number of shell scripts and unix commands implemented in C. Over time, a common library that shared between commands has been developed, and many of the commands have been built into the main git executable. Mercurial is implemented mostly in Python (with a small amount of C), with an extension API that allows third parties to enhance Mercurial via custom Python modules."
+- git's default mode of operation for developers is to have their own private history. Both git and hg support this
+- "Branch Namespace. In Git, each repository has its own branch namespace, and users set up a mapping between local branchnames and remote ones. With Mercurial, there is a single branch namespace shared by all repositories."
+
+Similarities (probably not all of them):
+- rebasing support
+- pretty much everything
+
+
+"Summary
+In terms of implementation effort, Mercurial has a clear advantage due to its efficient HTTP transport protocol.
+
+In terms of features, Git is more powerful, but this tends to be offset by it being more complicated to use."

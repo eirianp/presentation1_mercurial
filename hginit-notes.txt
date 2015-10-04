@@ -1,3 +1,5 @@
+Source: a tutorial from:  http://hginit.com/
+
 ideas:
 	- open with what is revision control, general overview
 		- or.... start with what problem are we trying to solve
@@ -9,8 +11,6 @@ ideas:
 		- hg vs git
 	- how to set up a central repo (and why you would want to)
 	- hg serve and sharing with your friends
-
-Source #1: a tutorial from:  http://hginit.com/
 
 Chapter 0: Hg vs SVN
 - Mercurial is a version control system.
