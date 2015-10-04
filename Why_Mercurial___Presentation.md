@@ -5,31 +5,31 @@
 <br><br><br><br><br>
 
 ## Topics
-* What problem does revision control solve?
-* Why use revision control?
-* Dive into distributed revision control with Mercurial
+* What problem does version control solve?
+* Traditional Version Control
+* Dive into distributed version control with Mercurial
 * Summary
 <br><br><br><br><br>
 
 
-## What problem does revision control solve?
-* Revision control keeps a history of changes
+## What problem does version control solve?
+* Version control keeps a history of changes
 * This is useful for *individual contributors*
 	* versions of a resume
-* Revision control allows you to _roll back_ changes
+* Version control allows you to _roll back_ changes
 	* try out new code changes
 	* Without a history of changes, how do I keep track of last stable version?
 	* What if my changes broke code and I don't know how to fix it?
-* What does life look like without revision control?
+* What does life look like without version control?
 	* Keep track of versions with timestamps
 	* Or, a directory full of files with some numbering scheme
 	* Without a log of commit messages, it's easy to forget the motivation behind changes
-	* What if 2 different versions of the file  both have changes I want? Merging without a revision control system would be painful
+	* What if 2 different versions of the file  both have changes I want? Merging without a version control system would be painful
 <br><br><br><br><br>
 
-## What problem does revision control solve?
+## What problem does version control solve?
 * Let's consider a *team* instead of an individual contributor.
-* Revision control allows teams to
+* Version control allows teams to
 	* work together from different geographical locations
 		* simply commit (or push) your changes to allow team members to benefit from your work
 	* review the history of code changes. Suppose Bob was WFR'd (work force reduction) and I wanted to see what he was thinking when he made change X. I can look through the revision history to see commit messages and any comments he may have added.
@@ -42,7 +42,32 @@
 		* Do you really want to keep updating gen 6 software when you're trying to sell gen 10 solutions? You may want to mark the gen 6 codebase as *maintenance only*
 <br><br><br><br><br>
 
-## Why use revision control?
+## Traditional version control
+* Subversion (SVN) is a classic example of traditional version control.
+* In the traditional model, there is a central repository
+* The central repository contains all the revision history
+* Local copies, for instance in Shannon's directory, have one version of the code base only.
+	* If she wants to switch to an older revision, she must make a request to the central repository
+* What is a branch?
+<br><br><br><br><br>
+
+## Traditional version control -- advantages
+<br><br><br><br><br>
+
+## Traditional version control -- short comings
+* single point of failure
+	* what happens when the central repository is unavailable?
+	* what if your repository is on a single disk (no redundancy) and the disk fails?
+		* this happened regularly at the first company I worked at
+* _Committing_ to the central repository inflicts your changes on all teammates
+	* What if Dan and Shannon wanted to pair program before submitting changes
+<br><br><br><br><br>
+
+## Traditional version control -- Pitfalls from a consultant's perspective
+* content from hginit goes here
+<br><br><br><br><br>
+
+## Why use version control?
 * cohesiveness
 * communication
 <br><br><br><br><br>
