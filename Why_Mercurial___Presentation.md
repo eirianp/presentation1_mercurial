@@ -213,7 +213,7 @@
 	* type `hg init` to create a new repository. A .hg directory will be created in the current working directory.
 	* Next, try to add some files to the repository with `hg add`.
 	* What did you notice?  `hg add` will add everything in the current directory to the repository. Does your directory have hidden files? If you are also in a Git repository, for example, every file will be recursivly added, even if it's in a hidden file or directory (for example .git/).
-	* If that's not what you wanted, simple do an `hg revert` or `hg rever --all` to revert everything in the current directory to what it was at the last commit.
+	* If that's not what you wanted, simple do an `hg revert` or `hg revert --all` to revert everything in the current directory to what it was at the last commit.
 	* Ok, let's try that again. Do an `hg add foo.txt` to add `foo.txt` to the repository only.
 	* Do an `hg status` to see which files have changed. This is roughly equivalent to `svn status -u`.
 		* Mercurial gives character codes similar to SVN:
@@ -244,6 +244,17 @@
 	* this is roughly equivalent to `git instaweb`.
 	* Personally, I find `hg serve` much more useful than `hg cat`'ing through different revisions. As a software developer, a web interface is useful to me when I want to see when a bug was introduced or fixed.
 <br><br><br><br><br>
+
+## Dive into distributed version control with Mercurial -- Reverting
+* As we saw earlier, it's possible to discard changes and return to the last revision using `hg revert` or `hg revert --all`. This is equivalent to deleting any changed files and doing an `svn update`.
+* That's great, but eventually I'm going to commit to a branch that management has under *CRB control* (Change Review Board -- maintenance only branches that require approval for checkins). 
+* To get Larry the Product Owner off my case, I can quickly undo the last commit with an `hg rollback`. 3 hours and 46 Googles later, I can figure out how to do this in SVN. By then, Larry would have noticed and I will have had to write apology cards to 4 different managers and India's CRB board.
+* That's great too, but what if Earl got his CRB approved change into the branch moments after my bad commit? I can simply do an `hg backout -r x --merge` to remove my revision x from the branch. Note that this command may cause merge conflicts.
+<br><br><br><br><br>
+
+## Dive into distributed version control with Mercurial -- Merging
+<br><br><br><br><br>
+
 
 ## Mercurial Extension
 * also talk bout how Hg is monolithic and Git is an aggregate of smaller programs.
