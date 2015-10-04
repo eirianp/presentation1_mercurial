@@ -120,11 +120,11 @@
 ## Dive into distributed version control with Mercurial
 * Mercurial has a similar interface to Git:
 
-> eiriano> hg help
-> Mercurial Distributed SCM
-> 
-> list of commands:
-> 
+> eiriano> hg help <br>
+> Mercurial Distributed SCM <br>
+>  <br>
+> list of commands: <br>
+>  <br>
 >  add           add the specified files on the next commit
 >  addremove     add all new files, delete all missing files
 >  annotate      show changeset information by line for each file
