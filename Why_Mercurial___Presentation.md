@@ -11,6 +11,27 @@
 * Summary
 <br><br><br><br><br>
 
+
+## What problem does revision control solve?
+* Revision control keeps a history of changes
+* This is useful for _individual contributors_
+	* versions of a resume
+* Revision control allows you to _roll back_ changes
+	* try out new code changes
+	* Without a history of changes, how do I keep track of last stable version?
+	* What if my changes broke code and I don't know how to fix it?
+* What does life look like without revision control?
+	* Keep track of versions with timestamps
+	* Or, a directory full of files with some numbering scheme
+	* Without a log of commit messages, it's easy to forget the motivation behind changes
+	* What if 2 different versions of the file  both have changes I want? Merging without a revision control system would be painful
+<br><br><br><br><br>
+
+## What problem does revision control solve?
+* Let's consider a team
+<br><br><br><br><br>
+
+
 ## References
 1. http://hginit.com/
 2. http://stackoverflow.com/questions/1408450/why-should-i-use-version-control
