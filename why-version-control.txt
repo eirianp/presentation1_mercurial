@@ -1,0 +1,37 @@
+These are my original thoughts
+
+1.) history of changes. It's easy to break something that was working and not remember how to fix it. What if you close the text editor and you can't "undo" changes? Revision control will keep a history of changes so that rolling back is an option
+
+2.) deploy different versions of the code base to customers. Newer code might not work on older hardware, or your org may not have the resources to test new code on every supported platform. 
+
+3.) allow developers to work together on the same code base
+
+
+Here are some citations
+
+si618 has some good reasons on stackoverflow:
+	http://stackoverflow.com/questions/1408450/why-should-i-use-version-control
+	'''
+	Have you ever:
+
+	Made a change to code, realised it was a mistake and wanted to revert back?
+	Lost code or had a backup that was too old?
+	Had to maintain multiple versions of a product?
+	Wanted to see the difference between two (or more) versions of your code?
+	Wanted to prove that a particular change broke or fixed a piece of code?
+	Wanted to review the history of some code?
+	Wanted to submit a change to someone else's code?
+	Wanted to share your code, or let other people work on your code?
+	Wanted to see how much work is being done, and where, when and by whom?
+	Wanted to experiment with a new feature without interfering with working code?
+	In these cases, and no doubt others, a version control system should make your life easier.
+
+	To misquote a friend: A civilised tool for a civilised age.
+	'''
+
+From http://soundsoftware.ac.uk/why-version-control
+	- history of files
+	- share changes across different locations
+
+	- revision control is useful even if you're working on a project on your own.
+		- I know this from my work as an intern!
