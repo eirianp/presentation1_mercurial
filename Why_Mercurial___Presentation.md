@@ -14,7 +14,7 @@
 
 ## What problem does revision control solve?
 * Revision control keeps a history of changes
-* This is useful for _individual contributors_
+* This is useful for *individual contributors*
 	* versions of a resume
 * Revision control allows you to _roll back_ changes
 	* try out new code changes
@@ -28,7 +28,23 @@
 <br><br><br><br><br>
 
 ## What problem does revision control solve?
-* Let's consider a team
+* Let's consider a *team* instead of an individual contributor.
+* Revision control allows teams to
+	* work together from different geographical locations
+		* simply commit (or push) your changes to allow team members to benefit from your work
+	* review the history of code changes. Suppose Bob was WFR'd (work force reduction) and I wanted to see what he was thinking when he made change X. I can look through the revision history to see commit messages and any comments he may have added.
+	* submit changes to another person's code. Dan forgot to add a default case to his switch statement and all hell breaks loose. Shannon can go in and add this, making the world right again.
+	* ___maintain multiple versions of a product___
+		* Your organization may want to deploy different versions of the code base to customers
+		* Different features may have different price points
+		* Newer code may not work on older hardware
+		* Your organization may not have the resources to test every version of the code on every supported platform
+		* Do you really want to keep updating gen 6 software when you're trying to sell gen 10 solutions? You may want to mark the gen 6 codebase as *maintenance only*
+<br><br><br><br><br>
+
+## Why use revision control?
+* cohesiveness
+* communication
 <br><br><br><br><br>
 
 
