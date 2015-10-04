@@ -98,7 +98,7 @@
 <br><br><br><br><br>
 
 ## How is distributed version control different?
-* With a *distributed version control system*, each developer has the entire repository.
+* With a *distributed version control system*, each developer [has the entire repository.](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 	* Yes, the entire repository. A developer has all the branches, revisions, logs, etc. [All "diffs, commits, and reverts are done locally."](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/)
 	* Merging is an every-day activity and is easy *by nature*
 		* distributed version control systems like Git and Mercurial track changes at the directory level instead of single files
@@ -109,6 +109,10 @@
 * it is still possible to have a central repository 
 * This shift in functionality improves _communication_ between teammates
 	* ### Communication is the key to engineering!
+
+* The figures below from [Kiln](http://hginit.com) illustrate the difference:
+![alt text](http://hginit.com/i/00-svn.png "traditional version control")
+![alt text](http://hginit.com/i/00-hg.png "distributed version control")
 <br><br><br><br><br>
 
 
@@ -124,4 +128,5 @@
 9. http://ndpsoftware.com/git-cheatsheet.html
 10. https://code.google.com/p/support/wiki/DVCSAnalysis
 11. http://stevelosh.com/blog/2010/01/the-real-difference-between-mercurial-and-git/
+12: http://stackoverflow.com/questions/1598759/git-and-mercurial-compare-and-contrast
 
