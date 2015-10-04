@@ -48,10 +48,9 @@
 * The central repository contains all the revision history
 * Local copies, for instance in Shannon's directory, have one version of the code base only.
 	* If she wants to switch to an older revision, she must make a request to the central repository
-* What is a branch?
 <br><br><br><br><br>
 
-## Traditional version control -- concepts
+## Traditional version control -- basic concepts
 * Let's review concepts through *use cases*
 	* checking out
 		* Earl the new hire joins our team. The first thing we'd like him to do is *check out* the latest code from *trunk*, the active development branch
@@ -74,6 +73,7 @@
 	* The administrator determines where and when to *branch*
 	* The administrator determines who can add changes
 		* Shannon shouldn't be making un-approved and un-tested changes to a maintenance only branch
+* Plus, all the motivations for revision control we saw earlier
 <br><br><br><br><br>
 
 ## Traditional version control -- short comings
@@ -86,7 +86,15 @@
 <br><br><br><br><br>
 
 ## Traditional version control -- Pitfalls from a consultant's perspective
-* content from hginit goes here
+* The folks at [Kiln](http://hginit.com/) see the same story over and over
+	* Teams want to create a branch so that the development branch is separate from the shipping branch (what gets delivered to customers).
+	* This is fine until the team tries to *merge*. Merging is a nightmare
+	* It takes "six programmers around a single computer working for two weeks trying to manually reapply every single bug fix from the stable build back into the development build."
+	* Alternatively, each new feature "is in a big #ifdef block."
+* I see the same problem at my job with SVN
+	* a big committee decides who can check in what to which branch
+	* each developer needs approval
+	* automatic merging is forbidden -- every merge must be done by hand
 <br><br><br><br><br>
 
 ## Why use version control?
