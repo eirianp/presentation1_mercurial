@@ -97,9 +97,18 @@
 	* automatic merging is forbidden -- every merge must be done by hand
 <br><br><br><br><br>
 
-## Why use version control?
-* cohesiveness
-* communication
+## How is distributed version control different?
+* With a *distributed version control system*, each developer has the entire repository.
+	* Yes, the entire repository. A developer has all the branches, revisions, logs, etc. [All "diffs, commits, and reverts are done locally."](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/)
+	* Merging is an every-day activity and is easy *by nature*
+		* distributed version control systems like Git and Mercurial track changes at the directory level instead of single files
+* This enables workflows that are difficult or impossible with traditional version control systems
+	* Shannon and Dan can share their local changes with each other without inflicting them on the entire team
+	* It's possible to work *offline* (committing, branching, merging, etc.)
+	* There's no more "giant checkins" because each developer will have their incremental history
+* it is still possible to have a central repository 
+* This shift in functionality improves _communication_ between teammates
+	* ### Communication is the key to engineering!
 <br><br><br><br><br>
 
 
