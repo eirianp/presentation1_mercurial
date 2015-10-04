@@ -1,9 +1,17 @@
 # Distributed Version Control with Mercurial
+![alt text](https://www.selenic.com/hg-logo/logo-droplets-75.png "Mercurial logo from www.selenic.com")
+### _Eirian O Perkins_
 #
-### _Eirian O Perkins_ ![alt text](https://www.selenic.com/hg-logo/logo-droplets-75.png "Mercurial logo from www.selenic.com")
 <br><br><br><br><br>
 
-# References
+## Topics
+* What problem does revision control solve?
+* Why use revision control?
+* Dive into distributed revision control with Mercurial
+* Summary
+<br><br><br><br><br>
+
+## References
 1. http://hginit.com/
 2. http://stackoverflow.com/questions/1408450/why-should-i-use-version-control
 3. http://soundsoftware.ac.uk/why-version-control
