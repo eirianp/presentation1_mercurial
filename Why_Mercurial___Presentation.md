@@ -1,3 +1,3 @@
 > # Distributed Version Control with Mercurial
 > 
-> ### Eirian O Perkins
+> ### _Eirian O Perkins_
