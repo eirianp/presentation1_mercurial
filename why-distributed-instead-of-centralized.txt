@@ -1,0 +1,34 @@
+make sure to answer what version control has to do with software engineering
+	- what are the central tenants of software engineering?
+		- communication is key. DVCS can facilitate much better communication than centralized
+		- for instance, it would be awesome to share changes with Sharon and Jaime 
+		- esp. if we're pair programming
+
+https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+
+- single point of failure:
+- what happens if the central server goes down?
+	- at work we have mirrors from different sites (we damn well better as a storage vendor)
+	- but it's still a pain in the ass when one goes down and I have to switch
+	- ok, it's not that bad, but I complain loudly
+	- but, if there weren't mirrors, my team would be SOL
+		- or, no work done while server is down
+- distributed... "Every clone is really a full backup of all the data."
+
+- several types of workflows that are possible in a distributed repository are not possible in a centralized one
+
+- "Administrators have fine-grained control over who can do what"
+	- this isn't a bad thing, just noting.
+
+Key advantages: from http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/
+
+'''
+Key Advantages
+
+Everyone has a local sandbox. You can make changes and roll back, all on your local machine. No more giant checkins; your incremental history is in your repo.
+It works offline. You only need to be online to share changes. Otherwise, you can happily stay on your local machine, checking in and undoing, no matter if the “server” is down or you’re on an airplane.
+It’s fast. Diffs, commits and reverts are all done locally. There’s no shaky network or server to ask for old revisions from a year ago.
+It handles changes well. Distributed version control systems were built around sharing changes. Every change has a guid which makes it easy to track.
+Branching and merging is easy. Because every developer “has their own branch”, every shared change is like reverse integration. But the guids make it easy to automatically combine changes and avoid duplicates.
+Less management. Distributed VCSes are easy to get running; there’s no “always-running” server software to install. Also, DVCSes may not require you to “add” new users; you just pick what URLs to pull from. This can avoid political headaches in large projects.
+'''
