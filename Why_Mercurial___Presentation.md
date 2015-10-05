@@ -305,8 +305,118 @@
 <br><br><br><br><br>
 
 
-## Mercurial Extension
-* also talk bout how Hg is monolithic and Git is an aggregate of smaller programs.
+## But Git has X feature!
+* Mercurial and Git have fairly similar features
+* Can't find feature X in Mercurial? Try looking for an extension.
+* Consider Git's stash feature. This allows Git users to set aside changes they're not actively working on.
+* For example, often times I like to fix compiler warnings. Since everyone says they're so busy all the time, it's hard to get these changes reviewed and accepted. I also don't want to accidentally `push` them to the central repository.
+* So does Mercurial support this feature? Yes, through the *shelve extension*.
+* To enable it, add `shelve=` under the `[extensions]` field in your .hgrc file.
+	* `vim ~/.hgrc`
+
+> # example user config (see "hg help config" for more info) <br>
+> [ui] <br>
+> # name and email, e.g.<br>
+> # username = Jane Doe <jdoe@example.com><br>
+> username = eirian<br>
+> <br>
+> [extensions]<br>
+> shelve=<br>
+> # uncomment these lines to enable some popular extensions<br>
+> # (see "hg help extensions" for more info)<br>
+> #<br>
+> # pager =<br>
+> # progress =<br>
+> color=<br>
+
+* You might also notice the `color=` line in my .hgrc file. As a second example, Mercurial does not have colorful output by default like Git does. This can also be enabled via the color extension. 
+* Extensions may not be ideal because they must be configured and may have to be downloaded. 
+<br><br><br><br><br>
+
+## Git and Mercurial are pretty similar
+* Both are distributed version control systems with a very similar feature set.
+* One isn't necessarily "better" than the other. 
+* What are the main differences?
+	* You can't prune (discard) branches in Mercurial
+	* Several authors suggest that Mercurial is easier to learn. I don't see much of a difference in learning curve.
+	* Git has a larger community. Git has GitHub behind it and Mercurial his BitBucket. They're fairly similar.
+	* Mercurial has better support for Windows developers. TortoiseHg is pretty similar to TortoiseSVN. The official Windows support for Git is through cygwin, which isn't that awesome.
+	* The archetecture is fairly different. Git is more of an aggregate of C programs. Mercurial is more monolithic and implemented mostly in Python with some small amount of C. Mercurial supports third party extensions in the form of Python modules.
+* The differences I noticed as a beginner were minimal. As mentioned earlier, Mercurial doesn't have colorful output enabled as a default. Mercurial also seems to be more verbose. 
+* I created a Git and Mercurial repository in the same repository. Let's check out the differences:
+### Git:
+
+> eiriano> git status <br>
+> On branch master <br>
+> Your branch is up-to-date with 'origin/master'. <br>
+> Changes not staged for commit: <br>
+>   (use "git add <file>..." to update what will be committed) <br>
+>   (use "git checkout -- <file>..." to discard changes in working directory) <br>
+>  <br>
+> 	modified:   Why_Mercurial___Presentation.md <br>
+>  <br>
+> Untracked files: <br>
+> 	  (use "git add <file>..." to include in what will be committed) <br>
+> 			.hg/ <br>
+> 			.hgtags <br>
+> no changes added to commit (use "git add" and/or "git commit -a") <br>
+
+### Mercurial:
+> eiriano> hg status
+> ? .git/COMMIT_EDITMSG <br>
+> ? .git/HEAD <br>
+> ? .git/config <br>
+> ? .git/description <br>
+> ? .git/gitweb/gitweb_config.perl <br>
+> ? .git/gitweb/lighttpd.conf <br>
+> ? .git/gitweb/lighttpd/error.log <br>
+> ? .git/hooks/applypatch-msg.sample <br>
+> ? .git/hooks/commit-msg.sample <br>
+> ? .git/hooks/post-update.sample <br>
+> ? .git/hooks/pre-applypatch.sample <br>
+> ? .git/hooks/pre-commit.sample <br>
+> ? .git/hooks/pre-push.sample <br>
+> ? .git/hooks/pre-rebase.sample <br>
+> ? .git/hooks/prepare-commit-msg.sample <br>
+> ? .git/hooks/update.sample <br>
+> ? .git/index <br>
+> ? .git/info/exclude <br>
+> ? .git/logs/HEAD <br>
+> ? .git/logs/refs/heads/master <br>
+> ? .git/logs/refs/remotes/origin/master <br>
+> ? .git/objects/00/8b8bff6d4b3d989fd68b3aab4330b6a304c117 <br>
+> ? .git/objects/05/5c45b500c973ad1539bb3a9503d5bad47ff515 <br>
+> ? .git/objects/08/f3575ce48ca655f01ea86dc32355c89cee810a <br>
+> ? .git/objects/09/046d8644606d1c703372f019686a5813a1890f <br>
+> ? .git/objects/0d/5fe10487748f9467e1ad948d40e25a2c32cc54 <br>
+> ? .git/objects/0d/aa4a5a0a557d0134d97ad2132486457dd0ae14 <br>
+> ? .git/objects/0e/8255a58aa75075532be4d8208c7d7a867f81fb <br>
+> ? .git/objects/10/8bbb146ab7f0755d6e6fafca1611194653f957 <br>
+> ? .git/objects/11/7d27938216d5b9e671c939cc18bfce308c2e75 <br>
+> ? .git/objects/12/542ce8c53b8a4c306945623fc29833171d0b0f <br>
+> ? .git/objects/16/031c9c380a8246630bbe31c6e3b2a1c9e17432 <br>
+> ? .git/objects/1c/1cd735ed74b6bc41dbb84e21b90f9f4b07eecc <br>
+> ? .git/objects/1c/6b7bafee6cecf3572cf8a3514cd7f59017eaca <br>
+> ? .git/objects/1d/f11e569ebf2542a50df8a86b8159a4d2434f0e <br>
+> ? .git/objects/1f/7b6fb2516a67ccfff52a08c98814ec19ccc550 <br>
+> ? .git/objects/25/7cc5642cb1a054f08cc83f2d943e56fd3ebe99 <br>
+> ? .git/objects/26/ac29f75afc0460e6b8c37e9149798935c8ee15 <br>
+> ? .git/objects/26/dd5629c7cc835381628448d84fa10a8e0a1be8 <br>
+> ? .git/objects/27/2df6243b40433d120f496718aca4f8d9270943 <br>
+> ? .git/objects/29/12b4ca523cd5d9c21778f62a2134cf007beefd <br>
+> ? .git/objects/2b/4600909f2703ba3404d2ceffa2307bd656b784 <br>
+> ? .git/objects/2d/2d2b44dfb233fa46d260c8a4ecca24a776e931 <br>
+
+* This continues for a long while. I truncated the output.
+<br><br><br><br><br>
+
+## Summary
+* In a distributed version control system, every user has a complete and local repository.
+* Both Git and Mercurial are distributed version control systems.
+* "Traditional" version control systems use a central repository. This is possible but not required for Bit and Mercurial.
+* Branching and merging are every day activities in Mercurial and are orders of magnitude easier to perform than in traditional version control systems. (It's possible that's an exaggeration.)
+* Git and Mercurial are fairly similar in terms of features and interface, but Git is somewhat more popular.
+* Distributed version control systems enhance communication and collaboration in a software engineering environment.
 <br><br><br><br><br>
 
 ## References
