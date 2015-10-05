@@ -314,19 +314,19 @@
 * To enable it, add `shelve=` under the `[extensions]` field in your .hgrc file.
 	* `vim ~/.hgrc`
 
-> # example user config (see "hg help config" for more info) <br>
+> \# example user config (see "hg help config" for more info) <br>
 > [ui] <br>
-> # name and email, e.g.<br>
-> # username = Jane Doe <jdoe@example.com><br>
+> \# name and email, e.g.<br>
+> \# username = Jane Doe <jdoe@example.com><br>
 > username = eirian<br>
 > <br>
 > [extensions]<br>
 > shelve=<br>
-> # uncomment these lines to enable some popular extensions<br>
-> # (see "hg help extensions" for more info)<br>
-> #<br>
-> # pager =<br>
-> # progress =<br>
+> \# uncomment these lines to enable some popular extensions<br>
+> \# (see "hg help extensions" for more info)<br>
+> \#<br>
+> \# pager =<br>
+> \# progress =<br>
 > color=<br>
 
 * You might also notice the `color=` line in my .hgrc file. As a second example, Mercurial does not have colorful output by default like Git does. This can also be enabled via the color extension. 
