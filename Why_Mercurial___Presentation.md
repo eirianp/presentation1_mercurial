@@ -344,8 +344,8 @@
 	* The archetecture is fairly different. Git is more of an aggregate of C programs. Mercurial is more monolithic and implemented mostly in Python with some small amount of C. Mercurial supports third party extensions in the form of Python modules.
 * The differences I noticed as a beginner were minimal. As mentioned earlier, Mercurial doesn't have colorful output enabled as a default. Mercurial also seems to be more verbose. 
 * I created a Git and Mercurial repository in the same repository. Let's check out the differences:
-### Git:
 
+#### Git:
 > eiriano> git status <br>
 > On branch master <br>
 > Your branch is up-to-date with 'origin/master'. <br>
@@ -361,7 +361,7 @@
 > 			.hgtags <br>
 > no changes added to commit (use "git add" and/or "git commit -a") <br>
 
-### Mercurial:
+#### Mercurial:
 > eiriano> hg status
 > ? .git/COMMIT_EDITMSG <br>
 > ? .git/HEAD <br>
