@@ -266,6 +266,7 @@
 * A "nice-to-have" feature that Mercurial offers is the ability to give a change set a unique name called a "tag."
 * Use the command `hg tag <tagname>` to create a tag.
 * Let's look at an example:
+
 > eiriano> hg tag my-great-tag
 > eiriano> hg commit -m "adding tag"
 > eiriano> hg log 
@@ -290,10 +291,13 @@
 > user:        eirian
 > date:        Tue Sep 29 00:14:58 2015 -0600
 > summary:     adding notes.txt to first commit
+
 * Now this tag name can be used to jump to that changeset:
+
 > hg up -r my-great-tag
-- you can do an hg up -r <tag> to go to a particular changeset:
-    hg up -r my-great-tag
+
+* you can do an hg up -r <tag> to go to a particular changeset:
+	* `hg up -r my-great-tag`
 * suppose my-great-tag was some version that gets shipped to a customer, and a bug has to get changed. You can hg up to it, make a change, and ship. That doesn't seem too much different than going to a branch on svn for the same reason.
 * if you want this new change in head, you have to do an hg merge. Mercurial has a bug where the .hgtags file has a merge conflict (if some revisions have tags). Just make sure to leave every line in the file.
 * alternatively, just clone one branch to another
