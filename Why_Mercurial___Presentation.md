@@ -253,6 +253,51 @@
 <br><br><br><br><br>
 
 ## Dive into distributed version control with Mercurial -- Merging
+* Merging happens all the time. If Shannon and I are both working on foo.txt and she commits a change I need to keep working, I'll have to perform an `hg pull` to get her change. Most of the time, Mercurial will merge automatically.
+* If Shannon and I were both working on the same part of the file, there will be a merge conflict that must be resolved manually. 
+* It's also possible that there will be two "heads," for instance, Shannon and I both made changes on the most recent changeset.
+* After merging, you should probably do a commit. Mercurial won't automatically commit after a merge.
+* It's also worth noting that [Git supports an unlimited number of parents.](https://code.google.com/p/support/wiki/DVCSAnalysis). Mercurial supports 2 only. This means that you'll have to perform "N-1 two-way merges" in mercurial.
+<br><br><br><br><br>
+
+## Dive into distributed version control with Mercurial -- Change Sets
+* As we saw earlier, the hash values seen in the output from `hg log` uniquely identifies a revision.
+* Mercurial also gives revision numbers, but these aren't unique. My revision 13 is probably different than Shannon's revision 13. 
+* A "nice-to-have" feature that Mercurial offers is the ability to give a change set a unique name called a "tag."
+* Use the command `hg tag <tagname>` to create a tag.
+* Let's look at an example:
+> eiriano> hg tag my-great-tag
+> eiriano> hg commit -m "adding tag"
+> eiriano> hg log 
+> changeset:   3:a6848afc4a3b
+> tag:         tip 
+> user:        eirian
+> date:        Sat Oct 03 20:09:50 2015 -0600
+> summary:     adding tag 
+> 
+> changeset:   2:7b16732fea62
+> user:        eirian
+> date:        Sat Oct 03 20:09:43 2015 -0600
+> summary:     Added tag my-great-tag for changeset 8bc04e68e855
+> 
+> changeset:   1:8bc04e68e855
+> tag:         my-great-tag
+> user:        eirian
+> date:        Tue Sep 29 00:17:04 2015 -0600
+> summary:     second commit, typing "hg commit" will commit all changed files. That's pretty convenient!
+> 
+> changeset:   0:8a935b4f88b5
+> user:        eirian
+> date:        Tue Sep 29 00:14:58 2015 -0600
+> summary:     adding notes.txt to first commit
+* Now this tag name can be used to jump to that changeset:
+> hg up -r my-great-tag
+- you can do an hg up -r <tag> to go to a particular changeset:
+    hg up -r my-great-tag
+* suppose my-great-tag was some version that gets shipped to a customer, and a bug has to get changed. You can hg up to it, make a change, and ship. That doesn't seem too much different than going to a branch on svn for the same reason.
+* if you want this new change in head, you have to do an hg merge. Mercurial has a bug where the .hgtags file has a merge conflict (if some revisions have tags). Just make sure to leave every line in the file.
+* alternatively, just clone one branch to another
+	* `hg clone -r <foo> my-great-tag some-other-tag`
 <br><br><br><br><br>
 
 
