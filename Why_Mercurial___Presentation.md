@@ -267,34 +267,34 @@
 * Use the command `hg tag <tagname>` to create a tag.
 * Let's look at an example:
 
-> eiriano> hg tag my-great-tag
-> eiriano> hg commit -m "adding tag"
-> eiriano> hg log 
-> changeset:   3:a6848afc4a3b
-> tag:         tip 
-> user:        eirian
-> date:        Sat Oct 03 20:09:50 2015 -0600
-> summary:     adding tag 
-> 
-> changeset:   2:7b16732fea62
-> user:        eirian
-> date:        Sat Oct 03 20:09:43 2015 -0600
-> summary:     Added tag my-great-tag for changeset 8bc04e68e855
-> 
-> changeset:   1:8bc04e68e855
-> tag:         my-great-tag
-> user:        eirian
-> date:        Tue Sep 29 00:17:04 2015 -0600
-> summary:     second commit, typing "hg commit" will commit all changed files. That's pretty convenient!
-> 
-> changeset:   0:8a935b4f88b5
-> user:        eirian
-> date:        Tue Sep 29 00:14:58 2015 -0600
-> summary:     adding notes.txt to first commit
+> eiriano> hg tag my-great-tag <br>
+> eiriano> hg commit -m "adding tag" <br>
+> eiriano> hg log <br>
+> changeset:   3:a6848afc4a3b <br>
+> tag:         tip <br>
+> user:        eirian <br>
+> date:        Sat Oct 03 20:09:50 2015 -0600 <br>
+> summary:     adding tag <br>
+> <br>
+> changeset:   2:7b16732fea62 <br>
+> user:        eirian <br>
+> date:        Sat Oct 03 20:09:43 2015 -0600 <br>
+> summary:     Added tag my-great-tag for changeset 8bc04e68e855 <br>
+>  <br>
+> changeset:   1:8bc04e68e855 <br>
+> tag:         my-great-tag <br>
+> user:        eirian <br>
+> date:        Tue Sep 29 00:17:04 2015 -0600 <br>
+> summary:     second commit, typing "hg commit" will commit all changed files. That's pretty convenient! <br>
+>  <br>
+> changeset:   0:8a935b4f88b5 <br>
+> user:        eirian <br>
+> date:        Tue Sep 29 00:14:58 2015 -0600 <br>
+> summary:     adding notes.txt to first commit <br>
 
 * Now this tag name can be used to jump to that changeset:
 
-> hg up -r my-great-tag
+> hg up -r my-great-tag <br>
 
 * you can do an hg up -r <tag> to go to a particular changeset:
 	* `hg up -r my-great-tag`
